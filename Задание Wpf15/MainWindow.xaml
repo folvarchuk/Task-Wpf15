@@ -1,0 +1,116 @@
+﻿<Window x:Class="Задание_Wpf15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Задание_Wpf15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid>
+        <FlowDocumentReader>
+            <FlowDocument>
+                <Paragraph>
+                    При разработке дизайна окна мы часто используем элементы управления, отображающие текст:
+                </Paragraph>
+                <List MarkerStyle="Disc">
+                    <ListItem>
+                        <Paragraph>
+                            Label;
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            TextBox;
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            TextBlock.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    Для объёмных текстов (статей, отчётов и т.д.) в WPF используются
+                    <Italic>документы</Italic>.
+                </Paragraph>
+                <Paragraph>
+                    Существуют два типа документов:
+                </Paragraph>
+                <List MarkerStyle="Disc" Foreground="Red">
+                    <ListItem>
+                        <Paragraph>
+                            фиксированные (<Underline>FixedDocument</Underline>);
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            потоковые (<Underline>FlowDocument</Underline>).
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Section FontSize="14">
+                    <Table>
+                        <Table.Columns>
+                            <TableColumn Width="0.3*"/>
+                            <TableColumn Width="*"/>
+                            <TableColumn Width="2*"/>
+                        </Table.Columns>
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph FontWeight="Bold" TextAlignment="Center" Padding="5">
+                                        №
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph FontWeight="Bold" TextAlignment="Center" Padding="5">
+                                        Тип документа
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph FontWeight="Bold" TextAlignment="Center" Padding="5">
+                                        Назначение
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Padding="5">
+                                        1
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Padding="5">
+                                        Фиксированный (FixedDocument)
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Padding="5">
+                                        Предназначен для отображения фиксированного содержимого на основе формата XPS (XML Paper Specification)
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Padding="5">
+                                        2
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Padding="5">
+                                        Потоковый (FlowDocument)
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Padding="5">
+                                        Предназначен для отображения динамического содержимого в формате XAML
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </Section>
+            </FlowDocument>
+        </FlowDocumentReader>
+    </Grid>
+</Window>
